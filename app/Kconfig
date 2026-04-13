@@ -1,4 +1,7 @@
-menu "LED Subsystem"
+menuconfig LED_SUBSYSTEM
+    bool "LED Subsystem"
+    default y
+if LED_SUBSYSTEM
 choice
     prompt "LED blink sleep time"
     default LED_SLEEP_MEDIUM
@@ -35,12 +38,15 @@ menu "Expert settings"
 
 config LED_DEBUG
     bool "Enable LED debugging"
+    default n
 
 config LED_PATTERN
     bool "Custom blink pattern"
+    default n
 
 endmenu
 endif
-endmenu
+endif
+
 
 source "Kconfig.zephyr"
