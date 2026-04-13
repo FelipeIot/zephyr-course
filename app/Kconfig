@@ -1,0 +1,32 @@
+menu "LED Subsystem"
+choice
+    prompt "LED blink sleep time"
+    default LED_SLEEP_MEDIUM
+
+config LED_SLEEP_FAST
+    bool "0.5s (fast)"
+
+config LED_SLEEP_MEDIUM
+    bool "1s (medium)"
+
+config LED_SLEEP_SLOW
+    bool "2s (slow)"
+
+endchoice
+
+menuconfig LED_ADVANCED
+    bool "Advanced LED settings"
+    default n
+
+if LED_ADVANCED
+config LED_BRIGHTNESS
+    int "LED brightness (0-100)"
+    default 100
+    range 0 100
+config LED_FADE_DURATION
+    int "LED fade duration (ms)"
+    default 500
+endif
+endmenu
+
+source "Kconfig.zephyr"
