@@ -16,6 +16,12 @@ config LED_SLEEP_SLOW
     bool "2s (slow)"
 
 endchoice
+
+config APP_HEARTBEAT_PERIOD_MS
+    int "LED HEARTBEAT"
+    default 500
+    range 100  2000
+
 config BLINK_SLEEP_MS
 	int
 	default 250 if LED_SLEEP_FAST
