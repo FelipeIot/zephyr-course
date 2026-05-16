@@ -1,0 +1,55 @@
+cmake:
+  application:
+    configuration-dir: '/home/felipe/zephyrproject/zephyr-course/tests/calculator'
+    source-dir: '/home/felipe/zephyrproject/zephyr-course/tests/calculator'
+  board:
+    name: 'native_sim'
+    path:
+     - '/home/felipe/zephyrproject/zephyr/boards/native/native_sim'
+    qualifiers: 'native'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/felipe/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/felipe/zephyrproject/zephyr/boards/native/native_sim/native_sim.dts'
+    include-dirs:
+     - '/home/felipe/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/felipe/zephyrproject/modules/hal/atmel/include'
+     - '/home/felipe/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/felipe/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/felipe/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/felipe/zephyrproject/modules/hal/microchip/include'
+     - '/home/felipe/zephyrproject/modules/hal/microchip/dts'
+     - '/home/felipe/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/felipe/zephyrproject/modules/hal/nxp/dts'
+     - '/home/felipe/zephyrproject/modules/hal/stm32/dts'
+     - '/home/felipe/zephyrproject/modules/hal/ti/dts'
+     - '/home/felipe/zephyrproject/zephyr/include'
+     - '/home/felipe/zephyrproject/zephyr/include/zephyr'
+     - '/home/felipe/zephyrproject/zephyr/dts/common'
+     - '/home/felipe/zephyrproject/zephyr/dts/vendor'
+     - '/home/felipe/zephyrproject/zephyr/dts/rx'
+     - '/home/felipe/zephyrproject/zephyr/dts/x86'
+     - '/home/felipe/zephyrproject/zephyr/dts/xtensa'
+     - '/home/felipe/zephyrproject/zephyr/dts/sparc'
+     - '/home/felipe/zephyrproject/zephyr/dts/riscv'
+     - '/home/felipe/zephyrproject/zephyr/dts/posix'
+     - '/home/felipe/zephyrproject/zephyr/dts/arm64'
+     - '/home/felipe/zephyrproject/zephyr/dts/arm'
+     - '/home/felipe/zephyrproject/zephyr/dts/arc'
+     - '/home/felipe/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/felipe/zephyrproject/zephyr/boards/native/native_sim/native_sim_defconfig'
+     - '/home/felipe/zephyrproject/zephyr-course/tests/calculator/prj.conf'
+     - '/home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator/zephyr/misc/generated/extra_kconfig_options.conf'
+    user-files:
+     - '/home/felipe/zephyrproject/zephyr-course/tests/calculator/prj.conf'
+  toolchain:
+    name: 'host'
+    path: ''
+  zephyr:
+    version: '4.3.99'
+    zephyr-base: '/home/felipe/zephyrproject/zephyr'
+version: '0.1.0'

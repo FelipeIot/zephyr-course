@@ -1,0 +1,116 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:138 (include)"
+      - "/home/felipe/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/felipe/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:2 (find_package)"
+    message: |
+      The target system is: Generic - 4.3.99 - posix
+      The host system is: Linux - 6.17.0-22-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:138 (include)"
+      - "/home/felipe/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/felipe/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:2 (find_package)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:138 (include)"
+      - "/home/felipe/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/felipe/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:2 (find_package)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1131 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/kernel.cmake:135 (enable_language)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:138 (include)"
+      - "/home/felipe/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/felipe/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:2 (find_package)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+      Copyright (C) 2023 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/extensions.cmake:2421 (check_c_compiler_flag)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/extensions.cmake:1199 (check_compiler_flag)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/extensions.cmake:2460 (zephyr_check_compiler_flag)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/extensions.cmake:2436 (target_cc_option_fallback)"
+      - "/home/felipe/zephyrproject/zephyr/cmake/modules/extensions.cmake:156 (target_cc_option)"
+      - "/home/felipe/zephyrproject/zephyr/CMakeLists.txt:634 (zephyr_cc_option)"
+    directories:
+      source: "/home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/CMakeFiles/CMakeScratch/TryCompile-oC3crG"
+      binary: "/home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/CMakeFiles/CMakeScratch/TryCompile-oC3crG"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/felipe/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "check_fmacro_prefix_map__home_felipe_zephyrproject_zephyr_course_tests_ring_buf_CMAKE_SOURCE_DIR_C__fuse_ld_bfd"
+      cached: true
+      stdout: |
+        Change Dir: '/home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/CMakeFiles/CMakeScratch/TryCompile-oC3crG'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_d4804
+        [1/2] /usr/bin/gcc -Dcheck_fmacro_prefix_map__home_felipe_zephyrproject_zephyr_course_tests_ring_buf_CMAKE_SOURCE_DIR_C__fuse_ld_bfd  -fuse-ld=bfd   -fmacro-prefix-map=/home/felipe/zephyrproject/zephyr-course/tests/ring_buf=CMAKE_SOURCE_DIR -o CMakeFiles/cmTC_d4804.dir/src.c.obj -c /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf/CMakeFiles/CMakeScratch/TryCompile-oC3crG/src.c
+        [2/2] : && /usr/bin/gcc -fuse-ld=bfd  CMakeFiles/cmTC_d4804.dir/src.c.obj -o cmTC_d4804   && :
+        
+      exitCode: 0
+...

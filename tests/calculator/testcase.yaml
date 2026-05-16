@@ -1,0 +1,15 @@
+common:
+  tags:
+    - unit
+    - calculator
+    - ztest
+
+tests:
+  example.unit.calculator:
+    tags:
+      - unit
+      - calculator
+      - ztest
+    platform_allow:
+      - native_sim
+    timeout: 60

@@ -1,0 +1,8 @@
+<testsuites>
+	<testsuite name="native_sim/native" timestamp="2026-05-15T23:35:27.123847" time="0.12" tests="1" failures="0" errors="0" skipped="0">
+		<properties>
+			<property name="version" value="v4.3.0-9609-g1863204edabb" />
+		</properties>
+		<testcase classname="native_sim/native:example.unit.calculator" name="example.unit.calculator" time="0.12" />
+	</testsuite>
+</testsuites>

@@ -1,0 +1,100 @@
+2026-05-16 00:36:01,470 - twister - INFO - Using Ninja..
+2026-05-16 00:36:01,587 - twister - INFO - Zephyr version: v4.3.0-9609-g1863204edabb
+2026-05-16 00:36:01,590 - twister - DEBUG - Running cmake script /home/felipe/zephyrproject/zephyr/cmake/verify-toolchain.cmake
+2026-05-16 00:36:01,590 - twister - DEBUG - Calling cmake: /usr/bin/cmake -DFORMAT=json -P /home/felipe/zephyrproject/zephyr/cmake/verify-toolchain.cmake
+2026-05-16 00:36:01,756 - twister - DEBUG - Finished running /home/felipe/zephyrproject/zephyr/cmake/verify-toolchain.cmake
+2026-05-16 00:36:01,756 - twister - INFO - Using 'zephyr/gnu' toolchain variant.
+2026-05-16 00:36:02,584 - twister - DEBUG - Reading testsuite configuration files under /home/felipe/zephyrproject/zephyr-course/tests/calculator...
+2026-05-16 00:36:02,585 - twister - DEBUG - Found possible testsuite in /home/felipe/zephyrproject/zephyr-course/tests/calculator
+2026-05-16 00:36:02,587 - twister - DEBUG - No duplicates found.
+2026-05-16 00:36:02,587 - twister - DEBUG -  platform filter: ['native_sim']
+2026-05-16 00:36:02,587 - twister - DEBUG - platform_pattern: []
+2026-05-16 00:36:02,587 - twister - DEBUG -    vendor filter: []
+2026-05-16 00:36:02,587 - twister - DEBUG -      arch_filter: None
+2026-05-16 00:36:02,587 - twister - DEBUG -       tag_filter: None
+2026-05-16 00:36:02,587 - twister - DEBUG -      exclude_tag: None
+2026-05-16 00:36:02,587 - twister - DEBUG - Checking platform filter: ['native_sim']
+2026-05-16 00:36:02,587 - twister - INFO - Building initial testsuite list...
+2026-05-16 00:36:02,588 - twister - INFO - Built testsuite list in 0.00 seconds
+2026-05-16 00:36:02,588 - twister - INFO - Writing JSON report /home/felipe/zephyrproject/zephyr-course/twister-out/testplan.json
+2026-05-16 00:36:02,601 - twister - INFO - JOBS: 16
+2026-05-16 00:36:02,601 - twister - INFO - Adding tasks to the queue...
+2026-05-16 00:36:02,601 - twister - DEBUG - adding native_sim/native/host/gnu/example.unit.calculator
+2026-05-16 00:36:02,602 - twister - INFO - Added initial list of jobs to queue
+2026-05-16 00:36:02,608 - twister - DEBUG - Running cmake on /home/felipe/zephyrproject/zephyr-course/tests/calculator for native_sim/native
+2026-05-16 00:36:02,608 - twister - DEBUG - Calling cmake: /usr/bin/cmake -B/home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator -DTC_RUNID=ce64dc583172138b175430338dd6ac43 -DTC_NAME=example.unit.calculator -DCONFIG_COMPILER_WARNINGS_AS_ERRORS=y -DEXTRA_GEN_EDT_ARGS=--edtlib-Werror -GNinja -DPython3_EXECUTABLE=/home/felipe/zephyrproject/.venv/bin/python3 -DZEPHYR_TOOLCHAIN_VARIANT=host/gnu -S/home/felipe/zephyrproject/zephyr-course/tests/calculator -DBOARD=native_sim/native
+2026-05-16 00:36:02,627 - twister - DEBUG - Launched 16 jobs
+2026-05-16 00:36:07,784 - twister - DEBUG - Finished running cmake /home/felipe/zephyrproject/zephyr-course/tests/calculator for native_sim/native in 5.17 seconds
+2026-05-16 00:36:07,786 - twister - DEBUG - build test: native_sim/native/host/gnu/example.unit.calculator
+2026-05-16 00:36:07,786 - twister - DEBUG - Building /home/felipe/zephyrproject/zephyr-course/tests/calculator for native_sim/native
+2026-05-16 00:36:07,787 - twister - DEBUG - Running /usr/bin/cmake --build /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator
+2026-05-16 00:36:08,171 - twister - INFO - Execution interrupted
+2026-05-16 00:36:08,172 - twister - INFO - 1 test scenarios (1 configurations) selected, 0 configurations filtered (0 by static filter, 0 at runtime).
+2026-05-16 00:36:08,176 - twister - INFO - [32m0 of 1[39m executed test configurations passed (0.00%), 0 built (not run), 0 failed, 0 errored, with no warnings in 6.71 seconds.
+2026-05-16 00:36:08,177 - twister - INFO - 0 of 0 executed test cases passed (0.00%) on 1 out of total 1469 platforms (0.07%).
+2026-05-16 00:36:08,177 - twister - INFO - [32m0[39m test configurations executed on platforms, [36m1[39m test configurations were only built.
+2026-05-16 00:36:08,177 - twister - INFO - Saving reports...
+2026-05-16 00:36:08,177 - twister - INFO - Writing JSON report /home/felipe/zephyrproject/zephyr-course/twister-out/twister.json
+2026-05-16 00:36:08,177 - twister - INFO - Writing xunit report /home/felipe/zephyrproject/zephyr-course/twister-out/twister.xml...
+2026-05-16 00:36:08,177 - twister - DEBUG - example.unit.calculator: No status
+2026-05-16 00:36:08,178 - twister - INFO - Writing xunit report /home/felipe/zephyrproject/zephyr-course/twister-out/twister_report.xml...
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_last_result.add_updates_cache: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_last_result.no_result_before_first_op: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_last_result.overwrite_on_second_op: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_mul.null_pointer: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_add.zero: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_mul.negative_numbers: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_div.exact_division: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_last_result.failed_op_does_not_update: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_add.null_pointer: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_div.integer_truncation: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_add.mixed_signs: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_add.positive_numbers: No status
+2026-05-16 00:36:08,178 - twister - DEBUG - example.unit.calculator.calculator_sub.negative_result: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_sub.null_pointer: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_div.divide_by_zero: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_last_result.null_pointer: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_mul.positive_numbers: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_div.null_pointer: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_last_result.reset_clears_cache: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_add.negative_numbers: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_edge_cases.chained_operations: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_div.negative_dividend_truncation: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_sub.positive_result: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_mul.by_zero: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_last_result.add_updates_cache: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_last_result.no_result_before_first_op: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_last_result.overwrite_on_second_op: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_mul.null_pointer: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_add.zero: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_mul.negative_numbers: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_div.exact_division: No status
+2026-05-16 00:36:08,179 - twister - DEBUG - example.unit.calculator.calculator_last_result.failed_op_does_not_update: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_add.null_pointer: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_div.integer_truncation: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_add.mixed_signs: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_add.positive_numbers: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_sub.negative_result: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_sub.null_pointer: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_div.divide_by_zero: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_last_result.null_pointer: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_mul.positive_numbers: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_div.null_pointer: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_last_result.reset_clears_cache: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_add.negative_numbers: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_edge_cases.chained_operations: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_div.negative_dividend_truncation: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_sub.positive_result: No status
+2026-05-16 00:36:08,180 - twister - DEBUG - example.unit.calculator.calculator_mul.by_zero: No status
+2026-05-16 00:36:08,180 - twister - INFO - -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+2026-05-16 00:36:08,180 - twister - INFO - The following issues were found (showing the top 10 items):
+2026-05-16 00:36:08,180 - twister - INFO - 1) example.unit.calculator on native_sim/native None (None)
+2026-05-16 00:36:08,180 - twister - INFO - 
+2026-05-16 00:36:08,180 - twister - INFO - To rerun the tests, call twister using the following commandline:
+2026-05-16 00:36:08,180 - twister - INFO - west twister -p <PLATFORM> -s <TEST ID>, for example:
+2026-05-16 00:36:08,180 - twister - INFO - 
+2026-05-16 00:36:08,180 - twister - INFO - west twister -p native_sim/native -s example.unit.calculator
+2026-05-16 00:36:08,181 - twister - INFO - or with west:
+2026-05-16 00:36:08,181 - twister - INFO - west build -p -b native_sim/native tests/calculator -T example.unit.calculator
+2026-05-16 00:36:08,181 - twister - INFO - -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+2026-05-16 00:36:08,181 - twister - INFO - Run completed

@@ -1,0 +1,31 @@
+<testsuites>
+	<testsuite name="native_sim/native" timestamp="2026-05-15T23:55:53.381798" time="0.12" tests="24" failures="0" errors="0" skipped="0">
+		<properties>
+			<property name="version" value="v4.3.0-9609-g1863204edabb" />
+		</properties>
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_edge_cases.chained_operations" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_div.negative_dividend_truncation" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_div.null_pointer" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_div.divide_by_zero" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_div.integer_truncation" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_div.exact_division" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_mul.null_pointer" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_mul.by_zero" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_mul.negative_numbers" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_mul.positive_numbers" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_sub.null_pointer" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_sub.negative_result" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_sub.positive_result" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_add.null_pointer" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_add.zero" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_add.mixed_signs" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_add.negative_numbers" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_add.positive_numbers" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_last_result.reset_clears_cache" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_last_result.failed_op_does_not_update" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_last_result.overwrite_on_second_op" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_last_result.add_updates_cache" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_last_result.null_pointer" time="0.00" />
+		<testcase classname="example.unit.calculator" name="example.unit.calculator.calculator_last_result.no_result_before_first_op" time="0.00" />
+	</testsuite>
+</testsuites>

@@ -1,0 +1,64 @@
+2026-05-16 00:45:35,730 - twister - INFO - Using Ninja..
+2026-05-16 00:45:35,849 - twister - INFO - Zephyr version: v4.3.0-9609-g1863204edabb
+2026-05-16 00:45:35,851 - twister - DEBUG - Running cmake script /home/felipe/zephyrproject/zephyr/cmake/verify-toolchain.cmake
+2026-05-16 00:45:35,851 - twister - DEBUG - Calling cmake: /usr/bin/cmake -DFORMAT=json -P /home/felipe/zephyrproject/zephyr/cmake/verify-toolchain.cmake
+2026-05-16 00:45:36,012 - twister - DEBUG - Finished running /home/felipe/zephyrproject/zephyr/cmake/verify-toolchain.cmake
+2026-05-16 00:45:36,012 - twister - INFO - Using 'zephyr/gnu' toolchain variant.
+2026-05-16 00:45:36,842 - twister - DEBUG - Reading testsuite configuration files under /home/felipe/zephyrproject/zephyr-course/tests/ring_buf...
+2026-05-16 00:45:36,843 - twister - DEBUG - Found possible testsuite in /home/felipe/zephyrproject/zephyr-course/tests/ring_buf
+2026-05-16 00:45:36,845 - twister - DEBUG - No duplicates found.
+2026-05-16 00:45:36,845 - twister - DEBUG -  platform filter: ['native_sim']
+2026-05-16 00:45:36,845 - twister - DEBUG - platform_pattern: []
+2026-05-16 00:45:36,845 - twister - DEBUG -    vendor filter: []
+2026-05-16 00:45:36,845 - twister - DEBUG -      arch_filter: None
+2026-05-16 00:45:36,845 - twister - DEBUG -       tag_filter: None
+2026-05-16 00:45:36,845 - twister - DEBUG -      exclude_tag: None
+2026-05-16 00:45:36,845 - twister - DEBUG - Checking platform filter: ['native_sim']
+2026-05-16 00:45:36,845 - twister - INFO - Building initial testsuite list...
+2026-05-16 00:45:36,846 - twister - INFO - Built testsuite list in 0.00 seconds
+2026-05-16 00:45:36,846 - twister - INFO - Writing JSON report /home/felipe/zephyrproject/zephyr-course/twister-out/testplan.json
+2026-05-16 00:45:36,858 - twister - INFO - JOBS: 16
+2026-05-16 00:45:36,859 - twister - INFO - Adding tasks to the queue...
+2026-05-16 00:45:36,859 - twister - DEBUG - adding native_sim/native/host/gnu/homework.unit.ring_buf
+2026-05-16 00:45:36,860 - twister - INFO - Added initial list of jobs to queue
+2026-05-16 00:45:36,866 - twister - DEBUG - Running cmake on /home/felipe/zephyrproject/zephyr-course/tests/ring_buf for native_sim/native
+2026-05-16 00:45:36,866 - twister - DEBUG - Calling cmake: /usr/bin/cmake -B/home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/ring_buf/homework.unit.ring_buf -DTC_RUNID=c83f4a28f77d004a2e210a0373f4a75e -DTC_NAME=homework.unit.ring_buf -DCONFIG_COMPILER_WARNINGS_AS_ERRORS=y -DEXTRA_GEN_EDT_ARGS=--edtlib-Werror -GNinja -DPython3_EXECUTABLE=/home/felipe/zephyrproject/.venv/bin/python3 -DZEPHYR_TOOLCHAIN_VARIANT=host/gnu -S/home/felipe/zephyrproject/zephyr-course/tests/ring_buf -DBOARD=native_sim/native
+2026-05-16 00:45:36,882 - twister - DEBUG - Launched 16 jobs
+2026-05-16 00:45:39,137 - twister - INFO - Execution interrupted
+2026-05-16 00:45:39,138 - twister - INFO - 1 test scenarios (1 configurations) selected, 0 configurations filtered (0 by static filter, 0 at runtime).
+2026-05-16 00:45:39,144 - twister - INFO - [32m0 of 1[39m executed test configurations passed (0.00%), 0 built (not run), 0 failed, 0 errored, with no warnings in 3.41 seconds.
+2026-05-16 00:45:39,145 - twister - INFO - 0 of 0 executed test cases passed (0.00%) on 1 out of total 1469 platforms (0.07%).
+2026-05-16 00:45:39,145 - twister - INFO - [32m0[39m test configurations executed on platforms, [36m1[39m test configurations were only built.
+2026-05-16 00:45:39,145 - twister - INFO - Saving reports...
+2026-05-16 00:45:39,145 - twister - INFO - Writing JSON report /home/felipe/zephyrproject/zephyr-course/twister-out/twister.json
+2026-05-16 00:45:39,145 - twister - INFO - Writing xunit report /home/felipe/zephyrproject/zephyr-course/twister-out/twister.xml...
+2026-05-16 00:45:39,145 - twister - DEBUG - homework.unit.ring_buf: No status
+2026-05-16 00:45:39,146 - twister - INFO - Writing xunit report /home/felipe/zephyrproject/zephyr-course/twister-out/twister_report.xml...
+2026-05-16 00:45:39,146 - twister - DEBUG - homework.unit.ring_buf.ring_buf_push_pop.fifo_order: No status
+2026-05-16 00:45:39,146 - twister - DEBUG - homework.unit.ring_buf.ring_buf_boundaries.pop_null_returns_einval: No status
+2026-05-16 00:45:39,146 - twister - DEBUG - homework.unit.ring_buf.ring_buf_init.fresh_state: No status
+2026-05-16 00:45:39,146 - twister - DEBUG - homework.unit.ring_buf.ring_buf_push_pop.push_full_returns_enospc: No status
+2026-05-16 00:45:39,146 - twister - DEBUG - homework.unit.ring_buf.ring_buf_boundaries.is_full_after_fill: No status
+2026-05-16 00:45:39,146 - twister - DEBUG - homework.unit.ring_buf.ring_buf_init.reinit_clears_state: No status
+2026-05-16 00:45:39,146 - twister - DEBUG - homework.unit.ring_buf.ring_buf_push_pop.single_push_pop: No status
+2026-05-16 00:45:39,146 - twister - DEBUG - homework.unit.ring_buf.ring_buf_boundaries.peek_does_not_consume: No status
+2026-05-16 00:45:39,147 - twister - DEBUG - homework.unit.ring_buf.ring_buf_push_pop.fifo_order: No status
+2026-05-16 00:45:39,147 - twister - DEBUG - homework.unit.ring_buf.ring_buf_boundaries.pop_null_returns_einval: No status
+2026-05-16 00:45:39,147 - twister - DEBUG - homework.unit.ring_buf.ring_buf_init.fresh_state: No status
+2026-05-16 00:45:39,147 - twister - DEBUG - homework.unit.ring_buf.ring_buf_push_pop.push_full_returns_enospc: No status
+2026-05-16 00:45:39,147 - twister - DEBUG - homework.unit.ring_buf.ring_buf_boundaries.is_full_after_fill: No status
+2026-05-16 00:45:39,147 - twister - DEBUG - homework.unit.ring_buf.ring_buf_init.reinit_clears_state: No status
+2026-05-16 00:45:39,147 - twister - DEBUG - homework.unit.ring_buf.ring_buf_push_pop.single_push_pop: No status
+2026-05-16 00:45:39,147 - twister - DEBUG - homework.unit.ring_buf.ring_buf_boundaries.peek_does_not_consume: No status
+2026-05-16 00:45:39,147 - twister - INFO - -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+2026-05-16 00:45:39,147 - twister - INFO - The following issues were found (showing the top 10 items):
+2026-05-16 00:45:39,147 - twister - INFO - 1) homework.unit.ring_buf on native_sim/native None (None)
+2026-05-16 00:45:39,147 - twister - INFO - 
+2026-05-16 00:45:39,147 - twister - INFO - To rerun the tests, call twister using the following commandline:
+2026-05-16 00:45:39,147 - twister - INFO - west twister -p <PLATFORM> -s <TEST ID>, for example:
+2026-05-16 00:45:39,147 - twister - INFO - 
+2026-05-16 00:45:39,147 - twister - INFO - west twister -p native_sim/native -s homework.unit.ring_buf
+2026-05-16 00:45:39,147 - twister - INFO - or with west:
+2026-05-16 00:45:39,147 - twister - INFO - west build -p -b native_sim/native tests/ring_buf -T homework.unit.ring_buf
+2026-05-16 00:45:39,147 - twister - INFO - -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+2026-05-16 00:45:39,148 - twister - INFO - Run completed

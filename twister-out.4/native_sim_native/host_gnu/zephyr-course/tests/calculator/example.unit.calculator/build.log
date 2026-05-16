@@ -1,0 +1,45 @@
+Loading Zephyr default modules (Zephyr base).
+-- Application: /home/felipe/zephyrproject/zephyr-course/tests/calculator
+-- CMake version: 3.28.3
+-- Found Python3: /home/felipe/zephyrproject/.venv/bin/python3 (found suitable version "3.12.3", minimum required is "3.12") found components: Interpreter 
+-- Cache files will be written to: /home/felipe/.cache/zephyr
+-- Zephyr version: 4.3.99 (/home/felipe/zephyrproject/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: native_sim, qualifiers: native
+-- Found host-tools: zephyr 1.0.0 (/home/felipe/zephyr-sdk-1.0.0)
+-- Found toolchain: host (gcc/ld)
+-- Found Dtc: /home/felipe/zephyr-sdk-1.0.0/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/dtc (found suitable version "1.7.0", minimum required is "1.4.6") 
+-- Found BOARD.dts: /home/felipe/zephyrproject/zephyr/boards/native/native_sim/native_sim.dts
+-- Generated zephyr.dts: /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator/zephyr/zephyr.dts
+-- Generated pickled edt: /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator/zephyr/edt.pickle
+-- Generated devicetree_generated.h: /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing /home/felipe/zephyrproject/zephyr-course/tests/calculator/Kconfig
+Loaded configuration '/home/felipe/zephyrproject/zephyr/boards/native/native_sim/native_sim_defconfig'
+Merged configuration '/home/felipe/zephyrproject/zephyr-course/tests/calculator/prj.conf'
+Merged configuration '/home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator/zephyr/misc/generated/extra_kconfig_options.conf'
+Configuration saved to '/home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator/zephyr/.config'
+Kconfig header saved to '/home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator/zephyr/include/generated/zephyr/autoconf.h'
+-- Found GnuLd: /usr/bin/ld.bfd (found version "2.42") 
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/gcc
+CMake Warning at /home/felipe/zephyrproject/zephyr/subsys/random/CMakeLists.txt:12 (message):
+  
+
+      Warning: CONFIG_TIMER_RANDOM_GENERATOR and CONFIG_TEST_CSPRNG_GENERATOR are
+      not truly random generators. This capability is not secure and it is
+      provided for testing purposes only. Use it carefully.
+
+
+-- Using ccache: /usr/bin/ccache
+-- Found gen_kobject_list: /home/felipe/zephyrproject/zephyr/scripts/build/gen_kobject_list.py
+-- Configuring done (5.0s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    TC_NAME
+
+
+-- Build files have been written to: /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator

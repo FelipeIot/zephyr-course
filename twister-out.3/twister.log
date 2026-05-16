@@ -1,0 +1,880 @@
+2026-05-15 23:55:52,309 - twister - INFO - Using Ninja..
+2026-05-15 23:55:52,423 - twister - INFO - Zephyr version: v4.3.0-9609-g1863204edabb
+2026-05-15 23:55:52,426 - twister - DEBUG - Running cmake script /home/felipe/zephyrproject/zephyr/cmake/verify-toolchain.cmake
+2026-05-15 23:55:52,426 - twister - DEBUG - Calling cmake: /usr/bin/cmake -DFORMAT=json -P /home/felipe/zephyrproject/zephyr/cmake/verify-toolchain.cmake
+2026-05-15 23:55:52,580 - twister - DEBUG - Finished running /home/felipe/zephyrproject/zephyr/cmake/verify-toolchain.cmake
+2026-05-15 23:55:52,580 - twister - INFO - Using 'zephyr/gnu' toolchain variant.
+2026-05-15 23:55:53,378 - twister - DEBUG - Reading testsuite configuration files under /home/felipe/zephyrproject/zephyr-course/tests/calculator...
+2026-05-15 23:55:53,378 - twister - DEBUG - Found possible testsuite in /home/felipe/zephyrproject/zephyr-course/tests/calculator
+2026-05-15 23:55:53,380 - twister - DEBUG - No duplicates found.
+2026-05-15 23:55:53,380 - twister - DEBUG -  platform filter: ['native_sim']
+2026-05-15 23:55:53,380 - twister - DEBUG - platform_pattern: []
+2026-05-15 23:55:53,380 - twister - DEBUG -    vendor filter: []
+2026-05-15 23:55:53,380 - twister - DEBUG -      arch_filter: None
+2026-05-15 23:55:53,380 - twister - DEBUG -       tag_filter: None
+2026-05-15 23:55:53,380 - twister - DEBUG -      exclude_tag: None
+2026-05-15 23:55:53,380 - twister - DEBUG - Checking platform filter: ['native_sim']
+2026-05-15 23:55:53,381 - twister - INFO - Building initial testsuite list...
+2026-05-15 23:55:53,381 - twister - INFO - Built testsuite list in 0.00 seconds
+2026-05-15 23:55:53,381 - twister - INFO - Writing JSON report /home/felipe/zephyrproject/zephyr-course/twister-out/testplan.json
+2026-05-15 23:55:53,394 - twister - INFO - JOBS: 16
+2026-05-15 23:55:53,395 - twister - INFO - Adding tasks to the queue...
+2026-05-15 23:55:53,395 - twister - DEBUG - adding native_sim/native/host/gnu/example.unit.calculator
+2026-05-15 23:55:53,396 - twister - INFO - Added initial list of jobs to queue
+2026-05-15 23:55:53,403 - twister - DEBUG - Running cmake on /home/felipe/zephyrproject/zephyr-course/tests/calculator for native_sim/native
+2026-05-15 23:55:53,404 - twister - DEBUG - Calling cmake: /usr/bin/cmake -B/home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator -DTC_RUNID=825393220d65a85af2f6ec0b50353147 -DTC_NAME=example.unit.calculator -DCONFIG_COMPILER_WARNINGS_AS_ERRORS=y -DEXTRA_GEN_EDT_ARGS=--edtlib-Werror -GNinja -DPython3_EXECUTABLE=/home/felipe/zephyrproject/.venv/bin/python3 -DZEPHYR_TOOLCHAIN_VARIANT=host/gnu -S/home/felipe/zephyrproject/zephyr-course/tests/calculator -DBOARD=native_sim/native
+2026-05-15 23:55:53,422 - twister - DEBUG - Launched 16 jobs
+2026-05-15 23:55:58,527 - twister - DEBUG - Finished running cmake /home/felipe/zephyrproject/zephyr-course/tests/calculator for native_sim/native in 5.12 seconds
+2026-05-15 23:55:58,529 - twister - DEBUG - build test: native_sim/native/host/gnu/example.unit.calculator
+2026-05-15 23:55:58,529 - twister - DEBUG - Building /home/felipe/zephyrproject/zephyr-course/tests/calculator for native_sim/native
+2026-05-15 23:55:58,529 - twister - DEBUG - Running /usr/bin/cmake --build /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator
+2026-05-15 23:56:00,072 - twister - DEBUG - Finished building /home/felipe/zephyrproject/zephyr-course/tests/calculator for native_sim/native in 1.54 seconds
+2026-05-15 23:56:00,073 - twister - DEBUG - Determine test cases for test instance: native_sim/native/host/gnu/example.unit.calculator
+2026-05-15 23:56:00,073 - twister - DEBUG - Determine test cases for test suite: example.unit.calculator
+2026-05-15 23:56:00,128 - twister - DEBUG - Test instance native_sim/native/host/gnu/example.unit.calculator already has 24 testcase(s) known: [<TestCase example.unit.calculator.calculator_div.negative_dividend_truncation with None>, <TestCase example.unit.calculator.calculator_mul.positive_numbers with None>, <TestCase example.unit.calculator.calculator_div.divide_by_zero with None>, <TestCase example.unit.calculator.calculator_last_result.failed_op_does_not_update with None>, <TestCase example.unit.calculator.calculator_edge_cases.chained_operations with None>, <TestCase example.unit.calculator.calculator_mul.by_zero with None>, <TestCase example.unit.calculator.calculator_last_result.overwrite_on_second_op with None>, <TestCase example.unit.calculator.calculator_div.null_pointer with None>, <TestCase example.unit.calculator.calculator_add.null_pointer with None>, <TestCase example.unit.calculator.calculator_mul.negative_numbers with None>, <TestCase example.unit.calculator.calculator_sub.positive_result with None>, <TestCase example.unit.calculator.calculator_last_result.reset_clears_cache with None>, <TestCase example.unit.calculator.calculator_last_result.null_pointer with None>, <TestCase example.unit.calculator.calculator_mul.null_pointer with None>, <TestCase example.unit.calculator.calculator_add.zero with None>, <TestCase example.unit.calculator.calculator_add.mixed_signs with None>, <TestCase example.unit.calculator.calculator_add.negative_numbers with None>, <TestCase example.unit.calculator.calculator_sub.null_pointer with None>, <TestCase example.unit.calculator.calculator_last_result.add_updates_cache with None>, <TestCase example.unit.calculator.calculator_sub.negative_result with None>, <TestCase example.unit.calculator.calculator_last_result.no_result_before_first_op with None>, <TestCase example.unit.calculator.calculator_add.positive_numbers with None>, <TestCase example.unit.calculator.calculator_div.exact_division with None>, <TestCase example.unit.calculator.calculator_div.integer_truncation with None>]
+2026-05-15 23:56:00,128 - twister - DEBUG - Detected 24 Ztest case(s): [example.unit.calculator.calculator_edge_cases.chained_operations, example.unit.calculator.calculator_div.negative_dividend_truncation, example.unit.calculator.calculator_div.null_pointer, example.unit.calculator.calculator_div.divide_by_zero, example.unit.calculator.calculator_div.integer_truncation, example.unit.calculator.calculator_div.exact_division, example.unit.calculator.calculator_mul.null_pointer, example.unit.calculator.calculator_mul.by_zero, example.unit.calculator.calculator_mul.negative_numbers, example.unit.calculator.calculator_mul.positive_numbers, example.unit.calculator.calculator_sub.null_pointer, example.unit.calculator.calculator_sub.negative_result, example.unit.calculator.calculator_sub.positive_result, example.unit.calculator.calculator_add.null_pointer, example.unit.calculator.calculator_add.zero, example.unit.calculator.calculator_add.mixed_signs, example.unit.calculator.calculator_add.negative_numbers, example.unit.calculator.calculator_add.positive_numbers, example.unit.calculator.calculator_last_result.reset_clears_cache, example.unit.calculator.calculator_last_result.failed_op_does_not_update, example.unit.calculator.calculator_last_result.overwrite_on_second_op, example.unit.calculator.calculator_last_result.add_updates_cache, example.unit.calculator.calculator_last_result.null_pointer, example.unit.calculator.calculator_last_result.no_result_before_first_op] in /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator/zephyr/zephyr.elf
+2026-05-15 23:56:00,131 - twister - DEBUG - run test: native_sim/native/host/gnu/example.unit.calculator
+2026-05-15 23:56:00,131 - twister - DEBUG - Reset instance status from 'passed' to None before run.
+2026-05-15 23:56:00,131 - twister - DEBUG - Spawning process: /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator/zephyr/zephyr.exe
+in directory: /home/felipe/zephyrproject/zephyr-course/twister-out/native_sim_native/host_gnu/zephyr-course/tests/calculator/example.unit.calculator
+2026-05-15 23:56:00,131 - twister - DEBUG - Spawning BinaryHandler Thread for native_sim/native/host/gnu/example.unit.calculator
+2026-05-15 23:56:00,132 - twister - DEBUG - OUTPUT: *** Booting Zephyr OS build v4.3.0-9609-g1863204edabb ***
+2026-05-15 23:56:00,133 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_mul
+2026-05-15 23:56:00,133 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,133 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,133 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,133 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,134 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,134 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,134 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,134 - twister - DEBUG - OUTPUT: START - test_by_zero
+2026-05-15 23:56:00,134 - twister - DEBUG - OUTPUT:  PASS - test_by_zero in 0.000 seconds
+2026-05-15 23:56:00,134 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,134 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,135 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,135 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,135 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,135 - twister - DEBUG - OUTPUT: START - test_by_zero
+2026-05-15 23:56:00,135 - twister - DEBUG - OUTPUT:  PASS - test_by_zero in 0.000 seconds
+2026-05-15 23:56:00,135 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,136 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,136 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,136 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,136 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,136 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,136 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,136 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,137 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,137 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,137 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,137 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,137 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,137 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,138 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,138 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,138 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,138 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,138 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,138 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,139 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,139 - twister - DEBUG - OUTPUT: START - test_by_zero
+2026-05-15 23:56:00,139 - twister - DEBUG - OUTPUT:  PASS - test_by_zero in 0.000 seconds
+2026-05-15 23:56:00,139 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,139 - twister - DEBUG - OUTPUT: TESTSUITE calculator_mul succeeded
+2026-05-15 23:56:00,139 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_mul
+2026-05-15 23:56:00,139 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,140 - twister - DEBUG - OUTPUT: START - test_by_zero
+2026-05-15 23:56:00,140 - twister - DEBUG - OUTPUT:  PASS - test_by_zero in 0.000 seconds
+2026-05-15 23:56:00,140 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,140 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,140 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,140 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,140 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,141 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,141 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,141 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,141 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,141 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,141 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,141 - twister - DEBUG - OUTPUT: START - test_by_zero
+2026-05-15 23:56:00,142 - twister - DEBUG - OUTPUT:  PASS - test_by_zero in 0.000 seconds
+2026-05-15 23:56:00,142 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,142 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,142 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,142 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,142 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,142 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,143 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,143 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,143 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,143 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,143 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,143 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,143 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,143 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,144 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,144 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,144 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,144 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,144 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,144 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,144 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,145 - twister - DEBUG - OUTPUT: START - test_by_zero
+2026-05-15 23:56:00,145 - twister - DEBUG - OUTPUT:  PASS - test_by_zero in 0.000 seconds
+2026-05-15 23:56:00,145 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,145 - twister - DEBUG - OUTPUT: TESTSUITE calculator_mul succeeded
+2026-05-15 23:56:00,145 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_mul
+2026-05-15 23:56:00,145 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,145 - twister - DEBUG - OUTPUT: START - test_by_zero
+2026-05-15 23:56:00,145 - twister - DEBUG - OUTPUT:  PASS - test_by_zero in 0.000 seconds
+2026-05-15 23:56:00,146 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,146 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,146 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,146 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,146 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,146 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,146 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,146 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,147 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,147 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,147 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,147 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,147 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,147 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,147 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,148 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,148 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,148 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,148 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,148 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,148 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,148 - twister - DEBUG - OUTPUT: START - test_by_zero
+2026-05-15 23:56:00,149 - twister - DEBUG - OUTPUT:  PASS - test_by_zero in 0.000 seconds
+2026-05-15 23:56:00,149 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,149 - twister - DEBUG - OUTPUT: START - test_by_zero
+2026-05-15 23:56:00,149 - twister - DEBUG - OUTPUT:  PASS - test_by_zero in 0.000 seconds
+2026-05-15 23:56:00,149 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,149 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,149 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,150 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,150 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,150 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,150 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,150 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,150 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,150 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,150 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,151 - twister - DEBUG - OUTPUT: TESTSUITE calculator_mul succeeded
+2026-05-15 23:56:00,151 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_last_result
+2026-05-15 23:56:00,151 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,151 - twister - DEBUG - OUTPUT: START - test_failed_op_does_not_update
+2026-05-15 23:56:00,151 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,151 - twister - DEBUG - OUTPUT:  PASS - test_failed_op_does_not_update in 0.000 seconds
+2026-05-15 23:56:00,151 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,152 - twister - DEBUG - OUTPUT: START - test_reset_clears_cache
+2026-05-15 23:56:00,152 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,152 - twister - DEBUG - OUTPUT:  PASS - test_reset_clears_cache in 0.000 seconds
+2026-05-15 23:56:00,152 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,152 - twister - DEBUG - OUTPUT: START - test_add_updates_cache
+2026-05-15 23:56:00,152 - twister - DEBUG - OUTPUT:  PASS - test_add_updates_cache in 0.000 seconds
+2026-05-15 23:56:00,152 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,152 - twister - DEBUG - OUTPUT: START - test_overwrite_on_second_op
+2026-05-15 23:56:00,153 - twister - DEBUG - OUTPUT:  PASS - test_overwrite_on_second_op in 0.000 seconds
+2026-05-15 23:56:00,153 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,153 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,153 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,153 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,153 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,154 - twister - DEBUG - OUTPUT: START - test_no_result_before_first_op
+2026-05-15 23:56:00,154 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,154 - twister - DEBUG - OUTPUT:  PASS - test_no_result_before_first_op in 0.000 seconds
+2026-05-15 23:56:00,154 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,154 - twister - DEBUG - OUTPUT: START - test_failed_op_does_not_update
+2026-05-15 23:56:00,154 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,154 - twister - DEBUG - OUTPUT:  PASS - test_failed_op_does_not_update in 0.000 seconds
+2026-05-15 23:56:00,155 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,155 - twister - DEBUG - OUTPUT: START - test_reset_clears_cache
+2026-05-15 23:56:00,155 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,155 - twister - DEBUG - OUTPUT:  PASS - test_reset_clears_cache in 0.000 seconds
+2026-05-15 23:56:00,155 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,155 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,155 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,156 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,156 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,156 - twister - DEBUG - OUTPUT: START - test_add_updates_cache
+2026-05-15 23:56:00,156 - twister - DEBUG - OUTPUT:  PASS - test_add_updates_cache in 0.000 seconds
+2026-05-15 23:56:00,156 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,156 - twister - DEBUG - OUTPUT: START - test_no_result_before_first_op
+2026-05-15 23:56:00,156 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,156 - twister - DEBUG - OUTPUT:  PASS - test_no_result_before_first_op in 0.000 seconds
+2026-05-15 23:56:00,157 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,157 - twister - DEBUG - OUTPUT: START - test_overwrite_on_second_op
+2026-05-15 23:56:00,157 - twister - DEBUG - OUTPUT:  PASS - test_overwrite_on_second_op in 0.000 seconds
+2026-05-15 23:56:00,157 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,157 - twister - DEBUG - OUTPUT: START - test_no_result_before_first_op
+2026-05-15 23:56:00,157 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,158 - twister - DEBUG - OUTPUT:  PASS - test_no_result_before_first_op in 0.000 seconds
+2026-05-15 23:56:00,158 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,158 - twister - DEBUG - OUTPUT: START - test_add_updates_cache
+2026-05-15 23:56:00,158 - twister - DEBUG - OUTPUT:  PASS - test_add_updates_cache in 0.000 seconds
+2026-05-15 23:56:00,158 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,158 - twister - DEBUG - OUTPUT: START - test_overwrite_on_second_op
+2026-05-15 23:56:00,159 - twister - DEBUG - OUTPUT:  PASS - test_overwrite_on_second_op in 0.000 seconds
+2026-05-15 23:56:00,159 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,159 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,159 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,159 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,159 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,160 - twister - DEBUG - OUTPUT: START - test_failed_op_does_not_update
+2026-05-15 23:56:00,160 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,160 - twister - DEBUG - OUTPUT:  PASS - test_failed_op_does_not_update in 0.000 seconds
+2026-05-15 23:56:00,160 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,160 - twister - DEBUG - OUTPUT: START - test_reset_clears_cache
+2026-05-15 23:56:00,160 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,160 - twister - DEBUG - OUTPUT:  PASS - test_reset_clears_cache in 0.000 seconds
+2026-05-15 23:56:00,161 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,161 - twister - DEBUG - OUTPUT: TESTSUITE calculator_last_result succeeded
+2026-05-15 23:56:00,161 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_last_result
+2026-05-15 23:56:00,161 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,161 - twister - DEBUG - OUTPUT: START - test_overwrite_on_second_op
+2026-05-15 23:56:00,161 - twister - DEBUG - OUTPUT:  PASS - test_overwrite_on_second_op in 0.000 seconds
+2026-05-15 23:56:00,161 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,162 - twister - DEBUG - OUTPUT: START - test_no_result_before_first_op
+2026-05-15 23:56:00,162 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,162 - twister - DEBUG - OUTPUT:  PASS - test_no_result_before_first_op in 0.000 seconds
+2026-05-15 23:56:00,162 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,162 - twister - DEBUG - OUTPUT: START - test_failed_op_does_not_update
+2026-05-15 23:56:00,162 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,162 - twister - DEBUG - OUTPUT:  PASS - test_failed_op_does_not_update in 0.000 seconds
+2026-05-15 23:56:00,163 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,163 - twister - DEBUG - OUTPUT: START - test_add_updates_cache
+2026-05-15 23:56:00,163 - twister - DEBUG - OUTPUT:  PASS - test_add_updates_cache in 0.000 seconds
+2026-05-15 23:56:00,163 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,163 - twister - DEBUG - OUTPUT: START - test_reset_clears_cache
+2026-05-15 23:56:00,163 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,163 - twister - DEBUG - OUTPUT:  PASS - test_reset_clears_cache in 0.000 seconds
+2026-05-15 23:56:00,164 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,164 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,164 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,164 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,164 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,164 - twister - DEBUG - OUTPUT: START - test_failed_op_does_not_update
+2026-05-15 23:56:00,164 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,165 - twister - DEBUG - OUTPUT:  PASS - test_failed_op_does_not_update in 0.000 seconds
+2026-05-15 23:56:00,165 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,165 - twister - DEBUG - OUTPUT: START - test_add_updates_cache
+2026-05-15 23:56:00,165 - twister - DEBUG - OUTPUT:  PASS - test_add_updates_cache in 0.000 seconds
+2026-05-15 23:56:00,165 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,165 - twister - DEBUG - OUTPUT: START - test_reset_clears_cache
+2026-05-15 23:56:00,165 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,166 - twister - DEBUG - OUTPUT:  PASS - test_reset_clears_cache in 0.000 seconds
+2026-05-15 23:56:00,166 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,166 - twister - DEBUG - OUTPUT: START - test_overwrite_on_second_op
+2026-05-15 23:56:00,166 - twister - DEBUG - OUTPUT:  PASS - test_overwrite_on_second_op in 0.000 seconds
+2026-05-15 23:56:00,166 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,166 - twister - DEBUG - OUTPUT: START - test_no_result_before_first_op
+2026-05-15 23:56:00,166 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,166 - twister - DEBUG - OUTPUT:  PASS - test_no_result_before_first_op in 0.000 seconds
+2026-05-15 23:56:00,167 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,167 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,167 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,167 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,167 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,167 - twister - DEBUG - OUTPUT: START - test_no_result_before_first_op
+2026-05-15 23:56:00,167 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,167 - twister - DEBUG - OUTPUT:  PASS - test_no_result_before_first_op in 0.000 seconds
+2026-05-15 23:56:00,168 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,168 - twister - DEBUG - OUTPUT: START - test_reset_clears_cache
+2026-05-15 23:56:00,168 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,168 - twister - DEBUG - OUTPUT:  PASS - test_reset_clears_cache in 0.000 seconds
+2026-05-15 23:56:00,168 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,168 - twister - DEBUG - OUTPUT: START - test_add_updates_cache
+2026-05-15 23:56:00,168 - twister - DEBUG - OUTPUT:  PASS - test_add_updates_cache in 0.000 seconds
+2026-05-15 23:56:00,169 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,169 - twister - DEBUG - OUTPUT: START - test_failed_op_does_not_update
+2026-05-15 23:56:00,169 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,169 - twister - DEBUG - OUTPUT:  PASS - test_failed_op_does_not_update in 0.000 seconds
+2026-05-15 23:56:00,169 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,169 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,169 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,169 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,170 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,170 - twister - DEBUG - OUTPUT: START - test_overwrite_on_second_op
+2026-05-15 23:56:00,170 - twister - DEBUG - OUTPUT:  PASS - test_overwrite_on_second_op in 0.000 seconds
+2026-05-15 23:56:00,170 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,170 - twister - DEBUG - OUTPUT: TESTSUITE calculator_last_result succeeded
+2026-05-15 23:56:00,170 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_last_result
+2026-05-15 23:56:00,170 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,171 - twister - DEBUG - OUTPUT: START - test_failed_op_does_not_update
+2026-05-15 23:56:00,171 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,171 - twister - DEBUG - OUTPUT:  PASS - test_failed_op_does_not_update in 0.000 seconds
+2026-05-15 23:56:00,171 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,171 - twister - DEBUG - OUTPUT: START - test_add_updates_cache
+2026-05-15 23:56:00,171 - twister - DEBUG - OUTPUT:  PASS - test_add_updates_cache in 0.000 seconds
+2026-05-15 23:56:00,171 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,171 - twister - DEBUG - OUTPUT: START - test_reset_clears_cache
+2026-05-15 23:56:00,172 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,172 - twister - DEBUG - OUTPUT:  PASS - test_reset_clears_cache in 0.000 seconds
+2026-05-15 23:56:00,172 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,172 - twister - DEBUG - OUTPUT: START - test_no_result_before_first_op
+2026-05-15 23:56:00,172 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,172 - twister - DEBUG - OUTPUT:  PASS - test_no_result_before_first_op in 0.000 seconds
+2026-05-15 23:56:00,172 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,172 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,173 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,173 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,173 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,173 - twister - DEBUG - OUTPUT: START - test_overwrite_on_second_op
+2026-05-15 23:56:00,173 - twister - DEBUG - OUTPUT:  PASS - test_overwrite_on_second_op in 0.000 seconds
+2026-05-15 23:56:00,173 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,173 - twister - DEBUG - OUTPUT: START - test_overwrite_on_second_op
+2026-05-15 23:56:00,174 - twister - DEBUG - OUTPUT:  PASS - test_overwrite_on_second_op in 0.000 seconds
+2026-05-15 23:56:00,174 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,174 - twister - DEBUG - OUTPUT: START - test_reset_clears_cache
+2026-05-15 23:56:00,174 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,174 - twister - DEBUG - OUTPUT:  PASS - test_reset_clears_cache in 0.000 seconds
+2026-05-15 23:56:00,174 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,174 - twister - DEBUG - OUTPUT: START - test_failed_op_does_not_update
+2026-05-15 23:56:00,174 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,175 - twister - DEBUG - OUTPUT:  PASS - test_failed_op_does_not_update in 0.000 seconds
+2026-05-15 23:56:00,175 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,175 - twister - DEBUG - OUTPUT: START - test_add_updates_cache
+2026-05-15 23:56:00,175 - twister - DEBUG - OUTPUT:  PASS - test_add_updates_cache in 0.000 seconds
+2026-05-15 23:56:00,175 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,175 - twister - DEBUG - OUTPUT: START - test_no_result_before_first_op
+2026-05-15 23:56:00,175 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,176 - twister - DEBUG - OUTPUT:  PASS - test_no_result_before_first_op in 0.000 seconds
+2026-05-15 23:56:00,176 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,176 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,176 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,176 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,176 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,176 - twister - DEBUG - OUTPUT: START - test_failed_op_does_not_update
+2026-05-15 23:56:00,177 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,177 - twister - DEBUG - OUTPUT:  PASS - test_failed_op_does_not_update in 0.000 seconds
+2026-05-15 23:56:00,177 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,177 - twister - DEBUG - OUTPUT: START - test_no_result_before_first_op
+2026-05-15 23:56:00,177 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,177 - twister - DEBUG - OUTPUT:  PASS - test_no_result_before_first_op in 0.000 seconds
+2026-05-15 23:56:00,177 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,178 - twister - DEBUG - OUTPUT: START - test_overwrite_on_second_op
+2026-05-15 23:56:00,178 - twister - DEBUG - OUTPUT:  PASS - test_overwrite_on_second_op in 0.000 seconds
+2026-05-15 23:56:00,178 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,178 - twister - DEBUG - OUTPUT: START - test_add_updates_cache
+2026-05-15 23:56:00,178 - twister - DEBUG - OUTPUT:  PASS - test_add_updates_cache in 0.000 seconds
+2026-05-15 23:56:00,178 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,178 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,178 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,179 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,179 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,179 - twister - DEBUG - OUTPUT: START - test_reset_clears_cache
+2026-05-15 23:56:00,179 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: no result cached yet[0m
+2026-05-15 23:56:00,179 - twister - DEBUG - OUTPUT:  PASS - test_reset_clears_cache in 0.000 seconds
+2026-05-15 23:56:00,179 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,179 - twister - DEBUG - OUTPUT: TESTSUITE calculator_last_result succeeded
+2026-05-15 23:56:00,180 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_div
+2026-05-15 23:56:00,180 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,180 - twister - DEBUG - OUTPUT: START - test_integer_truncation
+2026-05-15 23:56:00,180 - twister - DEBUG - OUTPUT:  PASS - test_integer_truncation in 0.000 seconds
+2026-05-15 23:56:00,180 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,180 - twister - DEBUG - OUTPUT: START - test_divide_by_zero
+2026-05-15 23:56:00,180 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,180 - twister - DEBUG - OUTPUT:  PASS - test_divide_by_zero in 0.000 seconds
+2026-05-15 23:56:00,181 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,181 - twister - DEBUG - OUTPUT: START - test_exact_division
+2026-05-15 23:56:00,181 - twister - DEBUG - OUTPUT:  PASS - test_exact_division in 0.000 seconds
+2026-05-15 23:56:00,181 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,181 - twister - DEBUG - OUTPUT: START - test_negative_dividend_truncation
+2026-05-15 23:56:00,181 - twister - DEBUG - OUTPUT:  PASS - test_negative_dividend_truncation in 0.000 seconds
+2026-05-15 23:56:00,181 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,182 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,182 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,182 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,182 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,182 - twister - DEBUG - OUTPUT: START - test_negative_dividend_truncation
+2026-05-15 23:56:00,182 - twister - DEBUG - OUTPUT:  PASS - test_negative_dividend_truncation in 0.000 seconds
+2026-05-15 23:56:00,182 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,183 - twister - DEBUG - OUTPUT: START - test_integer_truncation
+2026-05-15 23:56:00,183 - twister - DEBUG - OUTPUT:  PASS - test_integer_truncation in 0.000 seconds
+2026-05-15 23:56:00,183 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,183 - twister - DEBUG - OUTPUT: START - test_exact_division
+2026-05-15 23:56:00,183 - twister - DEBUG - OUTPUT:  PASS - test_exact_division in 0.000 seconds
+2026-05-15 23:56:00,183 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,183 - twister - DEBUG - OUTPUT: START - test_divide_by_zero
+2026-05-15 23:56:00,183 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,184 - twister - DEBUG - OUTPUT:  PASS - test_divide_by_zero in 0.000 seconds
+2026-05-15 23:56:00,184 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,184 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,184 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,184 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,184 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,184 - twister - DEBUG - OUTPUT: START - test_negative_dividend_truncation
+2026-05-15 23:56:00,185 - twister - DEBUG - OUTPUT:  PASS - test_negative_dividend_truncation in 0.000 seconds
+2026-05-15 23:56:00,185 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,185 - twister - DEBUG - OUTPUT: START - test_divide_by_zero
+2026-05-15 23:56:00,185 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,185 - twister - DEBUG - OUTPUT:  PASS - test_divide_by_zero in 0.000 seconds
+2026-05-15 23:56:00,185 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,186 - twister - DEBUG - OUTPUT: START - test_integer_truncation
+2026-05-15 23:56:00,186 - twister - DEBUG - OUTPUT:  PASS - test_integer_truncation in 0.000 seconds
+2026-05-15 23:56:00,186 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,186 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,186 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,186 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,186 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,187 - twister - DEBUG - OUTPUT: START - test_exact_division
+2026-05-15 23:56:00,187 - twister - DEBUG - OUTPUT:  PASS - test_exact_division in 0.000 seconds
+2026-05-15 23:56:00,187 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,187 - twister - DEBUG - OUTPUT: TESTSUITE calculator_div succeeded
+2026-05-15 23:56:00,187 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_div
+2026-05-15 23:56:00,187 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,187 - twister - DEBUG - OUTPUT: START - test_integer_truncation
+2026-05-15 23:56:00,187 - twister - DEBUG - OUTPUT:  PASS - test_integer_truncation in 0.000 seconds
+2026-05-15 23:56:00,188 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,188 - twister - DEBUG - OUTPUT: START - test_negative_dividend_truncation
+2026-05-15 23:56:00,188 - twister - DEBUG - OUTPUT:  PASS - test_negative_dividend_truncation in 0.000 seconds
+2026-05-15 23:56:00,188 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,188 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,189 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,189 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,189 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,189 - twister - DEBUG - OUTPUT: START - test_exact_division
+2026-05-15 23:56:00,189 - twister - DEBUG - OUTPUT:  PASS - test_exact_division in 0.000 seconds
+2026-05-15 23:56:00,189 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,189 - twister - DEBUG - OUTPUT: START - test_divide_by_zero
+2026-05-15 23:56:00,189 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,190 - twister - DEBUG - OUTPUT:  PASS - test_divide_by_zero in 0.000 seconds
+2026-05-15 23:56:00,190 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,190 - twister - DEBUG - OUTPUT: START - test_integer_truncation
+2026-05-15 23:56:00,190 - twister - DEBUG - OUTPUT:  PASS - test_integer_truncation in 0.000 seconds
+2026-05-15 23:56:00,190 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,190 - twister - DEBUG - OUTPUT: START - test_negative_dividend_truncation
+2026-05-15 23:56:00,190 - twister - DEBUG - OUTPUT:  PASS - test_negative_dividend_truncation in 0.000 seconds
+2026-05-15 23:56:00,191 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,191 - twister - DEBUG - OUTPUT: START - test_divide_by_zero
+2026-05-15 23:56:00,191 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,191 - twister - DEBUG - OUTPUT:  PASS - test_divide_by_zero in 0.000 seconds
+2026-05-15 23:56:00,191 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,191 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,191 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,191 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,192 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,192 - twister - DEBUG - OUTPUT: START - test_exact_division
+2026-05-15 23:56:00,192 - twister - DEBUG - OUTPUT:  PASS - test_exact_division in 0.000 seconds
+2026-05-15 23:56:00,192 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,192 - twister - DEBUG - OUTPUT: START - test_exact_division
+2026-05-15 23:56:00,192 - twister - DEBUG - OUTPUT:  PASS - test_exact_division in 0.000 seconds
+2026-05-15 23:56:00,192 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,192 - twister - DEBUG - OUTPUT: START - test_integer_truncation
+2026-05-15 23:56:00,193 - twister - DEBUG - OUTPUT:  PASS - test_integer_truncation in 0.000 seconds
+2026-05-15 23:56:00,193 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,193 - twister - DEBUG - OUTPUT: START - test_divide_by_zero
+2026-05-15 23:56:00,193 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,193 - twister - DEBUG - OUTPUT:  PASS - test_divide_by_zero in 0.000 seconds
+2026-05-15 23:56:00,193 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,193 - twister - DEBUG - OUTPUT: START - test_negative_dividend_truncation
+2026-05-15 23:56:00,194 - twister - DEBUG - OUTPUT:  PASS - test_negative_dividend_truncation in 0.000 seconds
+2026-05-15 23:56:00,194 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,194 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,194 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,194 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,194 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,194 - twister - DEBUG - OUTPUT: TESTSUITE calculator_div succeeded
+2026-05-15 23:56:00,194 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_div
+2026-05-15 23:56:00,195 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,195 - twister - DEBUG - OUTPUT: START - test_divide_by_zero
+2026-05-15 23:56:00,195 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,195 - twister - DEBUG - OUTPUT:  PASS - test_divide_by_zero in 0.000 seconds
+2026-05-15 23:56:00,195 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,195 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,195 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,195 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,196 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,196 - twister - DEBUG - OUTPUT: START - test_exact_division
+2026-05-15 23:56:00,196 - twister - DEBUG - OUTPUT:  PASS - test_exact_division in 0.000 seconds
+2026-05-15 23:56:00,196 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,196 - twister - DEBUG - OUTPUT: START - test_integer_truncation
+2026-05-15 23:56:00,196 - twister - DEBUG - OUTPUT:  PASS - test_integer_truncation in 0.000 seconds
+2026-05-15 23:56:00,196 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,197 - twister - DEBUG - OUTPUT: START - test_negative_dividend_truncation
+2026-05-15 23:56:00,197 - twister - DEBUG - OUTPUT:  PASS - test_negative_dividend_truncation in 0.000 seconds
+2026-05-15 23:56:00,197 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,197 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,197 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,197 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,197 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,197 - twister - DEBUG - OUTPUT: START - test_exact_division
+2026-05-15 23:56:00,198 - twister - DEBUG - OUTPUT:  PASS - test_exact_division in 0.000 seconds
+2026-05-15 23:56:00,198 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,198 - twister - DEBUG - OUTPUT: START - test_divide_by_zero
+2026-05-15 23:56:00,198 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,198 - twister - DEBUG - OUTPUT:  PASS - test_divide_by_zero in 0.000 seconds
+2026-05-15 23:56:00,198 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,198 - twister - DEBUG - OUTPUT: START - test_integer_truncation
+2026-05-15 23:56:00,198 - twister - DEBUG - OUTPUT:  PASS - test_integer_truncation in 0.000 seconds
+2026-05-15 23:56:00,199 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,199 - twister - DEBUG - OUTPUT: START - test_negative_dividend_truncation
+2026-05-15 23:56:00,199 - twister - DEBUG - OUTPUT:  PASS - test_negative_dividend_truncation in 0.000 seconds
+2026-05-15 23:56:00,199 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,199 - twister - DEBUG - OUTPUT: START - test_divide_by_zero
+2026-05-15 23:56:00,199 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;33m<wrn> calculator: division by zero[0m
+2026-05-15 23:56:00,199 - twister - DEBUG - OUTPUT:  PASS - test_divide_by_zero in 0.000 seconds
+2026-05-15 23:56:00,200 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,200 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,200 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,200 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,200 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,200 - twister - DEBUG - OUTPUT: START - test_negative_dividend_truncation
+2026-05-15 23:56:00,200 - twister - DEBUG - OUTPUT:  PASS - test_negative_dividend_truncation in 0.000 seconds
+2026-05-15 23:56:00,200 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,201 - twister - DEBUG - OUTPUT: START - test_exact_division
+2026-05-15 23:56:00,201 - twister - DEBUG - OUTPUT:  PASS - test_exact_division in 0.000 seconds
+2026-05-15 23:56:00,201 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,201 - twister - DEBUG - OUTPUT: START - test_integer_truncation
+2026-05-15 23:56:00,201 - twister - DEBUG - OUTPUT:  PASS - test_integer_truncation in 0.000 seconds
+2026-05-15 23:56:00,201 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,201 - twister - DEBUG - OUTPUT: TESTSUITE calculator_div succeeded
+2026-05-15 23:56:00,201 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_sub
+2026-05-15 23:56:00,202 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,202 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,202 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,202 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,202 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,202 - twister - DEBUG - OUTPUT: START - test_negative_result
+2026-05-15 23:56:00,202 - twister - DEBUG - OUTPUT:  PASS - test_negative_result in 0.000 seconds
+2026-05-15 23:56:00,203 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,203 - twister - DEBUG - OUTPUT: START - test_positive_result
+2026-05-15 23:56:00,203 - twister - DEBUG - OUTPUT:  PASS - test_positive_result in 0.000 seconds
+2026-05-15 23:56:00,203 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,203 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,203 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,203 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,204 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,204 - twister - DEBUG - OUTPUT: START - test_positive_result
+2026-05-15 23:56:00,204 - twister - DEBUG - OUTPUT:  PASS - test_positive_result in 0.000 seconds
+2026-05-15 23:56:00,204 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,204 - twister - DEBUG - OUTPUT: START - test_negative_result
+2026-05-15 23:56:00,204 - twister - DEBUG - OUTPUT:  PASS - test_negative_result in 0.000 seconds
+2026-05-15 23:56:00,204 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,204 - twister - DEBUG - OUTPUT: START - test_positive_result
+2026-05-15 23:56:00,205 - twister - DEBUG - OUTPUT:  PASS - test_positive_result in 0.000 seconds
+2026-05-15 23:56:00,205 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,205 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,205 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,205 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,205 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,205 - twister - DEBUG - OUTPUT: START - test_negative_result
+2026-05-15 23:56:00,206 - twister - DEBUG - OUTPUT:  PASS - test_negative_result in 0.000 seconds
+2026-05-15 23:56:00,206 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,206 - twister - DEBUG - OUTPUT: TESTSUITE calculator_sub succeeded
+2026-05-15 23:56:00,206 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_sub
+2026-05-15 23:56:00,206 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,206 - twister - DEBUG - OUTPUT: START - test_negative_result
+2026-05-15 23:56:00,206 - twister - DEBUG - OUTPUT:  PASS - test_negative_result in 0.000 seconds
+2026-05-15 23:56:00,206 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,207 - twister - DEBUG - OUTPUT: START - test_positive_result
+2026-05-15 23:56:00,207 - twister - DEBUG - OUTPUT:  PASS - test_positive_result in 0.000 seconds
+2026-05-15 23:56:00,207 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,207 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,207 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,207 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,207 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,207 - twister - DEBUG - OUTPUT: START - test_positive_result
+2026-05-15 23:56:00,208 - twister - DEBUG - OUTPUT:  PASS - test_positive_result in 0.000 seconds
+2026-05-15 23:56:00,208 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,208 - twister - DEBUG - OUTPUT: START - test_negative_result
+2026-05-15 23:56:00,208 - twister - DEBUG - OUTPUT:  PASS - test_negative_result in 0.000 seconds
+2026-05-15 23:56:00,208 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,208 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,208 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,209 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,209 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,209 - twister - DEBUG - OUTPUT: START - test_negative_result
+2026-05-15 23:56:00,209 - twister - DEBUG - OUTPUT:  PASS - test_negative_result in 0.000 seconds
+2026-05-15 23:56:00,209 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,209 - twister - DEBUG - OUTPUT: START - test_positive_result
+2026-05-15 23:56:00,209 - twister - DEBUG - OUTPUT:  PASS - test_positive_result in 0.000 seconds
+2026-05-15 23:56:00,209 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,210 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,210 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,210 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,210 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,210 - twister - DEBUG - OUTPUT: TESTSUITE calculator_sub succeeded
+2026-05-15 23:56:00,210 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_sub
+2026-05-15 23:56:00,210 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,210 - twister - DEBUG - OUTPUT: START - test_positive_result
+2026-05-15 23:56:00,211 - twister - DEBUG - OUTPUT:  PASS - test_positive_result in 0.000 seconds
+2026-05-15 23:56:00,211 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,211 - twister - DEBUG - OUTPUT: START - test_negative_result
+2026-05-15 23:56:00,211 - twister - DEBUG - OUTPUT:  PASS - test_negative_result in 0.000 seconds
+2026-05-15 23:56:00,211 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,211 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,211 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,212 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,212 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,212 - twister - DEBUG - OUTPUT: START - test_negative_result
+2026-05-15 23:56:00,212 - twister - DEBUG - OUTPUT:  PASS - test_negative_result in 0.000 seconds
+2026-05-15 23:56:00,212 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,212 - twister - DEBUG - OUTPUT: START - test_positive_result
+2026-05-15 23:56:00,212 - twister - DEBUG - OUTPUT:  PASS - test_positive_result in 0.000 seconds
+2026-05-15 23:56:00,212 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,213 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,213 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,213 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,213 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,213 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,213 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,213 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,213 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,214 - twister - DEBUG - OUTPUT: START - test_positive_result
+2026-05-15 23:56:00,214 - twister - DEBUG - OUTPUT:  PASS - test_positive_result in 0.000 seconds
+2026-05-15 23:56:00,214 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,214 - twister - DEBUG - OUTPUT: START - test_negative_result
+2026-05-15 23:56:00,214 - twister - DEBUG - OUTPUT:  PASS - test_negative_result in 0.000 seconds
+2026-05-15 23:56:00,214 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,214 - twister - DEBUG - OUTPUT: TESTSUITE calculator_sub succeeded
+2026-05-15 23:56:00,215 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_add
+2026-05-15 23:56:00,215 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,215 - twister - DEBUG - OUTPUT: START - test_mixed_signs
+2026-05-15 23:56:00,215 - twister - DEBUG - OUTPUT:  PASS - test_mixed_signs in 0.000 seconds
+2026-05-15 23:56:00,215 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,215 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,215 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,215 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,216 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,216 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,216 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,216 - twister - DEBUG - OUTPUT: START - test_zero
+2026-05-15 23:56:00,216 - twister - DEBUG - OUTPUT:  PASS - test_zero in 0.000 seconds
+2026-05-15 23:56:00,216 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,216 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,217 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,217 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,217 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,217 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,217 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,217 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,217 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,218 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,218 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,218 - twister - DEBUG - OUTPUT: START - test_mixed_signs
+2026-05-15 23:56:00,218 - twister - DEBUG - OUTPUT:  PASS - test_mixed_signs in 0.000 seconds
+2026-05-15 23:56:00,218 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,218 - twister - DEBUG - OUTPUT: START - test_zero
+2026-05-15 23:56:00,218 - twister - DEBUG - OUTPUT:  PASS - test_zero in 0.000 seconds
+2026-05-15 23:56:00,218 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,219 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,219 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,219 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,219 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,219 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,219 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,219 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,220 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,220 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,220 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,220 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,220 - twister - DEBUG - OUTPUT: START - test_zero
+2026-05-15 23:56:00,220 - twister - DEBUG - OUTPUT:  PASS - test_zero in 0.000 seconds
+2026-05-15 23:56:00,220 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,220 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,221 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,221 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,221 - twister - DEBUG - OUTPUT: START - test_mixed_signs
+2026-05-15 23:56:00,221 - twister - DEBUG - OUTPUT:  PASS - test_mixed_signs in 0.000 seconds
+2026-05-15 23:56:00,221 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,221 - twister - DEBUG - OUTPUT: TESTSUITE calculator_add succeeded
+2026-05-15 23:56:00,221 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_add
+2026-05-15 23:56:00,221 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,222 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,222 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,222 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,222 - twister - DEBUG - OUTPUT: START - test_zero
+2026-05-15 23:56:00,222 - twister - DEBUG - OUTPUT:  PASS - test_zero in 0.000 seconds
+2026-05-15 23:56:00,222 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,222 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,223 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,223 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,223 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,223 - twister - DEBUG - OUTPUT: START - test_mixed_signs
+2026-05-15 23:56:00,223 - twister - DEBUG - OUTPUT:  PASS - test_mixed_signs in 0.000 seconds
+2026-05-15 23:56:00,223 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,223 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,224 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,224 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,224 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,224 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,224 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,224 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,224 - twister - DEBUG - OUTPUT: START - test_mixed_signs
+2026-05-15 23:56:00,224 - twister - DEBUG - OUTPUT:  PASS - test_mixed_signs in 0.000 seconds
+2026-05-15 23:56:00,225 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,225 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,225 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,225 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,225 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,225 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,225 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,225 - twister - DEBUG - OUTPUT: START - test_zero
+2026-05-15 23:56:00,226 - twister - DEBUG - OUTPUT:  PASS - test_zero in 0.000 seconds
+2026-05-15 23:56:00,226 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,226 - twister - DEBUG - OUTPUT: START - test_zero
+2026-05-15 23:56:00,226 - twister - DEBUG - OUTPUT:  PASS - test_zero in 0.000 seconds
+2026-05-15 23:56:00,226 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,226 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,226 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,227 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,227 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,227 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,227 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,227 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,227 - twister - DEBUG - OUTPUT: START - test_mixed_signs
+2026-05-15 23:56:00,227 - twister - DEBUG - OUTPUT:  PASS - test_mixed_signs in 0.000 seconds
+2026-05-15 23:56:00,227 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,228 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,228 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,228 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,228 - twister - DEBUG - OUTPUT: TESTSUITE calculator_add succeeded
+2026-05-15 23:56:00,228 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_add
+2026-05-15 23:56:00,228 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,228 - twister - DEBUG - OUTPUT: START - test_zero
+2026-05-15 23:56:00,228 - twister - DEBUG - OUTPUT:  PASS - test_zero in 0.000 seconds
+2026-05-15 23:56:00,229 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,229 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,229 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,229 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,229 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,229 - twister - DEBUG - OUTPUT: START - test_mixed_signs
+2026-05-15 23:56:00,229 - twister - DEBUG - OUTPUT:  PASS - test_mixed_signs in 0.000 seconds
+2026-05-15 23:56:00,230 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,230 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,230 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,230 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,230 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,230 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,230 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,230 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,231 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,231 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,231 - twister - DEBUG - OUTPUT: START - test_mixed_signs
+2026-05-15 23:56:00,231 - twister - DEBUG - OUTPUT:  PASS - test_mixed_signs in 0.000 seconds
+2026-05-15 23:56:00,231 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,231 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,231 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,232 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,232 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,232 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,232 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,232 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,232 - twister - DEBUG - OUTPUT: START - test_zero
+2026-05-15 23:56:00,232 - twister - DEBUG - OUTPUT:  PASS - test_zero in 0.000 seconds
+2026-05-15 23:56:00,233 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,233 - twister - DEBUG - OUTPUT: START - test_negative_numbers
+2026-05-15 23:56:00,233 - twister - DEBUG - OUTPUT:  PASS - test_negative_numbers in 0.000 seconds
+2026-05-15 23:56:00,233 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,233 - twister - DEBUG - OUTPUT: START - test_zero
+2026-05-15 23:56:00,233 - twister - DEBUG - OUTPUT:  PASS - test_zero in 0.000 seconds
+2026-05-15 23:56:00,233 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,233 - twister - DEBUG - OUTPUT: START - test_positive_numbers
+2026-05-15 23:56:00,234 - twister - DEBUG - OUTPUT:  PASS - test_positive_numbers in 0.000 seconds
+2026-05-15 23:56:00,234 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,234 - twister - DEBUG - OUTPUT: START - test_null_pointer
+2026-05-15 23:56:00,234 - twister - DEBUG - OUTPUT: [00:00:00.000,000] [1;31m<err> calculator: result pointer is NULL[0m
+2026-05-15 23:56:00,234 - twister - DEBUG - OUTPUT:  PASS - test_null_pointer in 0.000 seconds
+2026-05-15 23:56:00,234 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,234 - twister - DEBUG - OUTPUT: START - test_mixed_signs
+2026-05-15 23:56:00,235 - twister - DEBUG - OUTPUT:  PASS - test_mixed_signs in 0.000 seconds
+2026-05-15 23:56:00,235 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,235 - twister - DEBUG - OUTPUT: TESTSUITE calculator_add succeeded
+2026-05-15 23:56:00,235 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_edge_cases
+2026-05-15 23:56:00,235 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,235 - twister - DEBUG - OUTPUT: START - test_chained_operations
+2026-05-15 23:56:00,235 - twister - DEBUG - OUTPUT:  PASS - test_chained_operations in 0.000 seconds
+2026-05-15 23:56:00,236 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,236 - twister - DEBUG - OUTPUT: START - test_chained_operations
+2026-05-15 23:56:00,236 - twister - DEBUG - OUTPUT:  PASS - test_chained_operations in 0.000 seconds
+2026-05-15 23:56:00,236 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,236 - twister - DEBUG - OUTPUT: START - test_chained_operations
+2026-05-15 23:56:00,236 - twister - DEBUG - OUTPUT:  PASS - test_chained_operations in 0.000 seconds
+2026-05-15 23:56:00,236 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,236 - twister - DEBUG - OUTPUT: TESTSUITE calculator_edge_cases succeeded
+2026-05-15 23:56:00,237 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_edge_cases
+2026-05-15 23:56:00,237 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,237 - twister - DEBUG - OUTPUT: START - test_chained_operations
+2026-05-15 23:56:00,237 - twister - DEBUG - OUTPUT:  PASS - test_chained_operations in 0.000 seconds
+2026-05-15 23:56:00,237 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,237 - twister - DEBUG - OUTPUT: START - test_chained_operations
+2026-05-15 23:56:00,237 - twister - DEBUG - OUTPUT:  PASS - test_chained_operations in 0.000 seconds
+2026-05-15 23:56:00,238 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,238 - twister - DEBUG - OUTPUT: START - test_chained_operations
+2026-05-15 23:56:00,238 - twister - DEBUG - OUTPUT:  PASS - test_chained_operations in 0.000 seconds
+2026-05-15 23:56:00,238 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,238 - twister - DEBUG - OUTPUT: TESTSUITE calculator_edge_cases succeeded
+2026-05-15 23:56:00,238 - twister - DEBUG - OUTPUT: Running TESTSUITE calculator_edge_cases
+2026-05-15 23:56:00,238 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,239 - twister - DEBUG - OUTPUT: START - test_chained_operations
+2026-05-15 23:56:00,239 - twister - DEBUG - OUTPUT:  PASS - test_chained_operations in 0.000 seconds
+2026-05-15 23:56:00,239 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,239 - twister - DEBUG - OUTPUT: START - test_chained_operations
+2026-05-15 23:56:00,239 - twister - DEBUG - OUTPUT:  PASS - test_chained_operations in 0.000 seconds
+2026-05-15 23:56:00,239 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,239 - twister - DEBUG - OUTPUT: START - test_chained_operations
+2026-05-15 23:56:00,240 - twister - DEBUG - OUTPUT:  PASS - test_chained_operations in 0.000 seconds
+2026-05-15 23:56:00,240 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,240 - twister - DEBUG - OUTPUT: TESTSUITE calculator_edge_cases succeeded
+2026-05-15 23:56:00,240 - twister - DEBUG - OUTPUT: 
+2026-05-15 23:56:00,240 - twister - DEBUG - OUTPUT: ------ TESTSUITE SUMMARY START ------
+2026-05-15 23:56:00,240 - twister - DEBUG - OUTPUT: 
+2026-05-15 23:56:00,240 - twister - DEBUG - OUTPUT: SUITE PASS - 100.00% [calculator_add]: pass = 5, fail = 0, skip = 0, total = 5 duration = 0.000 seconds
+2026-05-15 23:56:00,241 - twister - DEBUG - OUTPUT:  - PASS - [calculator_add.test_mixed_signs] duration = 0.000 seconds
+2026-05-15 23:56:00,241 - twister - DEBUG - OUTPUT:  - PASS - [calculator_add.test_negative_numbers] duration = 0.000 seconds
+2026-05-15 23:56:00,241 - twister - DEBUG - OUTPUT:  - PASS - [calculator_add.test_null_pointer] duration = 0.000 seconds
+2026-05-15 23:56:00,241 - twister - DEBUG - OUTPUT:  - PASS - [calculator_add.test_positive_numbers] duration = 0.000 seconds
+2026-05-15 23:56:00,241 - twister - DEBUG - OUTPUT:  - PASS - [calculator_add.test_zero] duration = 0.000 seconds
+2026-05-15 23:56:00,241 - twister - DEBUG - OUTPUT: 
+2026-05-15 23:56:00,242 - twister - DEBUG - OUTPUT: SUITE PASS - 100.00% [calculator_div]: pass = 5, fail = 0, skip = 0, total = 5 duration = 0.000 seconds
+2026-05-15 23:56:00,242 - twister - DEBUG - OUTPUT:  - PASS - [calculator_div.test_divide_by_zero] duration = 0.000 seconds
+2026-05-15 23:56:00,242 - twister - DEBUG - OUTPUT:  - PASS - [calculator_div.test_exact_division] duration = 0.000 seconds
+2026-05-15 23:56:00,242 - twister - DEBUG - OUTPUT:  - PASS - [calculator_div.test_integer_truncation] duration = 0.000 seconds
+2026-05-15 23:56:00,242 - twister - DEBUG - OUTPUT:  - PASS - [calculator_div.test_negative_dividend_truncation] duration = 0.000 seconds
+2026-05-15 23:56:00,242 - twister - DEBUG - OUTPUT:  - PASS - [calculator_div.test_null_pointer] duration = 0.000 seconds
+2026-05-15 23:56:00,242 - twister - DEBUG - OUTPUT: 
+2026-05-15 23:56:00,243 - twister - DEBUG - OUTPUT: SUITE PASS - 100.00% [calculator_edge_cases]: pass = 1, fail = 0, skip = 0, total = 1 duration = 0.000 seconds
+2026-05-15 23:56:00,243 - twister - DEBUG - OUTPUT:  - PASS - [calculator_edge_cases.test_chained_operations] duration = 0.000 seconds
+2026-05-15 23:56:00,243 - twister - DEBUG - OUTPUT: 
+2026-05-15 23:56:00,243 - twister - DEBUG - OUTPUT: SUITE PASS - 100.00% [calculator_last_result]: pass = 6, fail = 0, skip = 0, total = 6 duration = 0.000 seconds
+2026-05-15 23:56:00,243 - twister - DEBUG - OUTPUT:  - PASS - [calculator_last_result.test_add_updates_cache] duration = 0.000 seconds
+2026-05-15 23:56:00,243 - twister - DEBUG - OUTPUT:  - PASS - [calculator_last_result.test_failed_op_does_not_update] duration = 0.000 seconds
+2026-05-15 23:56:00,243 - twister - DEBUG - OUTPUT:  - PASS - [calculator_last_result.test_no_result_before_first_op] duration = 0.000 seconds
+2026-05-15 23:56:00,244 - twister - DEBUG - OUTPUT:  - PASS - [calculator_last_result.test_null_pointer] duration = 0.000 seconds
+2026-05-15 23:56:00,244 - twister - DEBUG - OUTPUT:  - PASS - [calculator_last_result.test_overwrite_on_second_op] duration = 0.000 seconds
+2026-05-15 23:56:00,244 - twister - DEBUG - OUTPUT:  - PASS - [calculator_last_result.test_reset_clears_cache] duration = 0.000 seconds
+2026-05-15 23:56:00,244 - twister - DEBUG - OUTPUT: 
+2026-05-15 23:56:00,244 - twister - DEBUG - OUTPUT: SUITE PASS - 100.00% [calculator_mul]: pass = 4, fail = 0, skip = 0, total = 4 duration = 0.000 seconds
+2026-05-15 23:56:00,244 - twister - DEBUG - OUTPUT:  - PASS - [calculator_mul.test_by_zero] duration = 0.000 seconds
+2026-05-15 23:56:00,244 - twister - DEBUG - OUTPUT:  - PASS - [calculator_mul.test_negative_numbers] duration = 0.000 seconds
+2026-05-15 23:56:00,245 - twister - DEBUG - OUTPUT:  - PASS - [calculator_mul.test_null_pointer] duration = 0.000 seconds
+2026-05-15 23:56:00,245 - twister - DEBUG - OUTPUT:  - PASS - [calculator_mul.test_positive_numbers] duration = 0.000 seconds
+2026-05-15 23:56:00,245 - twister - DEBUG - OUTPUT: 
+2026-05-15 23:56:00,245 - twister - DEBUG - OUTPUT: SUITE PASS - 100.00% [calculator_sub]: pass = 3, fail = 0, skip = 0, total = 3 duration = 0.000 seconds
+2026-05-15 23:56:00,245 - twister - DEBUG - OUTPUT:  - PASS - [calculator_sub.test_negative_result] duration = 0.000 seconds
+2026-05-15 23:56:00,245 - twister - DEBUG - OUTPUT:  - PASS - [calculator_sub.test_null_pointer] duration = 0.000 seconds
+2026-05-15 23:56:00,245 - twister - DEBUG - OUTPUT:  - PASS - [calculator_sub.test_positive_result] duration = 0.000 seconds
+2026-05-15 23:56:00,245 - twister - DEBUG - OUTPUT: 
+2026-05-15 23:56:00,246 - twister - DEBUG - OUTPUT: ------ TESTSUITE SUMMARY END ------
+2026-05-15 23:56:00,246 - twister - DEBUG - OUTPUT: 
+2026-05-15 23:56:00,246 - twister - DEBUG - OUTPUT: ===================================================================
+2026-05-15 23:56:00,246 - twister - DEBUG - OUTPUT: RunID: 825393220d65a85af2f6ec0b50353147
+2026-05-15 23:56:00,246 - twister - DEBUG - OUTPUT: PROJECT EXECUTION SUCCESSFUL
+2026-05-15 23:56:00,247 - twister - DEBUG - Expected suite names:['calculator_last_result', 'calculator_add', 'calculator_sub', 'calculator_mul', 'calculator_div', 'calculator_edge_cases']
+2026-05-15 23:56:00,247 - twister - DEBUG - Detected suite names:['calculator_mul', 'calculator_last_result', 'calculator_div', 'calculator_sub', 'calculator_add', 'calculator_edge_cases']
+2026-05-15 23:56:00,248 - twister - DEBUG - run status: native_sim/native/host/gnu/example.unit.calculator passed
+2026-05-15 23:56:00,255 - twister - INFO - 1 test scenarios (1 configurations) selected, 0 configurations filtered (0 by static filter, 0 at runtime).
+2026-05-15 23:56:00,261 - twister - INFO - [32m1 of 1[39m executed test configurations passed (100.00%), 0 built (not run), 0 failed, 0 errored, with no warnings in 7.95 seconds.
+2026-05-15 23:56:00,261 - twister - INFO - 24 of 24 executed test cases passed (100.00%) on 1 out of total 1469 platforms (0.07%).
+2026-05-15 23:56:00,261 - twister - INFO - [32m1[39m test configurations executed on platforms, [36m0[39m test configurations were only built.
+2026-05-15 23:56:00,261 - twister - INFO - Saving reports...
+2026-05-15 23:56:00,261 - twister - INFO - Writing JSON report /home/felipe/zephyrproject/zephyr-course/twister-out/twister.json
+2026-05-15 23:56:00,262 - twister - INFO - Writing xunit report /home/felipe/zephyrproject/zephyr-course/twister-out/twister.xml...
+2026-05-15 23:56:00,262 - twister - INFO - Writing xunit report /home/felipe/zephyrproject/zephyr-course/twister-out/twister_report.xml...
+2026-05-15 23:56:00,263 - twister - INFO - Run completed
