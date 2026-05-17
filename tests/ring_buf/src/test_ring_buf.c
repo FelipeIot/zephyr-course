@@ -146,7 +146,7 @@ ZTEST(ring_buf_boundaries, test_is_full_after_fill)
 	zassert_ok(rb_push(7),"Insert third value failed");
 	zassert_ok(rb_push(7),"Insert fourth value failed");
 	zassert_true(rb_is_full(), "full boundries dont work");
-	zassert_equal(rb_count(),4,"elements are not 4")
+	zassert_equal(rb_count(),4,"elements are not 4");
 
 
 	/* TODO(l8-task1): push 4 values -> rb_is_full() == true, rb_count() == 4.
