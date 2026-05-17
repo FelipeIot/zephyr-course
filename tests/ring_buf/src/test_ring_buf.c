@@ -118,25 +118,38 @@ ZTEST_SUITE(ring_buf_boundaries, NULL, NULL, before, NULL, NULL);
 
 ZTEST(ring_buf_boundaries, test_peek_does_not_consume)
 {
+	int v;
+	zassert_ok(rb_push(7),"Insert first value failed");
+	zassert_ok(rb_peek(&v),"get current value first time readed failed");
+	zassert_equal(v,7,"Value getted its not 7 first time");
+	zassert_ok(rb_peek(&v),"get current value second time readed failed");
+	zassert_equal(v,7,"Value getted its not 7 second time");
+
 	/* TODO(l8-task1): rb_push(7); rb_peek(&v) -> v == 7; rb_peek(&v) again
 	 * -> v == 7; rb_count() still == 1.
 	 * See TEST_SPEC.md "Suite ring_buf_boundaries" #1.
 	 */
-	ztest_test_skip();
 }
 
 ZTEST(ring_buf_boundaries, test_pop_null_returns_einval)
 {
+	zassert_equal(rb_pop(NULL),-EINVAL,"pop NULL doesnt return -EINVAL ");
 	/* TODO(l8-task1): rb_pop(NULL) -> -EINVAL.
 	 * See TEST_SPEC.md "Suite ring_buf_boundaries" #2.
 	 */
-	ztest_test_skip();
 }
 
 ZTEST(ring_buf_boundaries, test_is_full_after_fill)
 {
+	zassert_ok(rb_push(7),"Insert first value failed");
+	zassert_ok(rb_push(7),"Insert second value failed");
+	zassert_ok(rb_push(7),"Insert third value failed");
+	zassert_ok(rb_push(7),"Insert fourth value failed");
+	zassert_true(rb_is_full(), "full boundries dont work");
+	zassert_equal(rb_count(),4,"elements are not 4")
+
+
 	/* TODO(l8-task1): push 4 values -> rb_is_full() == true, rb_count() == 4.
 	 * See TEST_SPEC.md "Suite ring_buf_boundaries" #3.
 	 */
-	ztest_test_skip();
 }
