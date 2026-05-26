@@ -1,0 +1,3 @@
+config SARCHE_DRIVER
+    bool "Mi Driver"
+    default y

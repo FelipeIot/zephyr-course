@@ -1,14 +1,23 @@
-/*
- * Copyright (c) 2012-2014 Wind River Systems, Inc.
- *
- * SPDX-License-Identifier: Apache-2.0
- */
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
+#include <zephyr/drivers/sensor.h>
 
-#include <stdio.h>
+LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
 
 int main(void)
 {
-	printf("Hello World! %s\n", CONFIG_BOARD_TARGET);
+    int ret = 0;
+    int ret2 = 0;
 
-	return 0;
+    const struct device* driver = DEVICE_DT_GET(DT_NODELABEL(sarche_driver0));
+    struct sensor_value val;
+    while (1)
+    {
+        ret = sensor_channel_get(driver, SENSOR_CHAN_AMBIENT_TEMP, &val);
+        k_msleep(1000);
+        ret2 = sensor_sample_fetch(driver);
+        k_msleep(1000);
+    }
+    return 0;
 }

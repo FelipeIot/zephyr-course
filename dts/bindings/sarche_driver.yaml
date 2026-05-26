@@ -1,0 +1,3 @@
+description: LED driver just for fun
+compatible: "sarche,driver"
+include: base.yaml

@@ -1,58 +1,6 @@
 menuconfig LED_SUBSYSTEM
     bool "LED Subsystem"
     default y
-if LED_SUBSYSTEM
-choice
-    prompt "LED blink sleep time"
-    default LED_SLEEP_MEDIUM
-
-config LED_SLEEP_FAST
-    bool "0.25 s (fast)"
-
-config LED_SLEEP_MEDIUM
-    bool "1s (medium)"
-
-config LED_SLEEP_SLOW
-    bool "2s (slow)"
-
-endchoice
-
-config APP_HEARTBEAT_PERIOD_MS
-    int "LED HEARTBEAT"
-    default 500
-    range 100  2000
-
-config BLINK_SLEEP_MS
-	int
-	default 250 if LED_SLEEP_FAST
-	default 1000 if LED_SLEEP_MEDIUM
-	default 2000 if LED_SLEEP_SLOW
-
-menuconfig LED_ADVANCED
-    bool "Advanced LED settings"
-    default n
-
-if LED_ADVANCED
-config LED_BRIGHTNESS
-    int "LED brightness (0-100)"
-    default 100
-    range 0 100
-config LED_FADE_DURATION
-    int "LED fade duration (ms)"
-    default 500
-menu "Expert settings"
-
-config LED_DEBUG
-    bool "Enable LED debugging"
-    default n
-
-config LED_PATTERN
-    bool "Custom blink pattern"
-    default n
-
-endmenu
-endif
-endif
-
 
 source "Kconfig.zephyr"
+rsource "drivers/sarche_driver/Kconfig"
