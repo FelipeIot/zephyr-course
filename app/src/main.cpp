@@ -3,21 +3,34 @@
 #include <zephyr/logging/log.h>
 #include <zephyr/drivers/sensor.h>
 
+
+#define SLEEP_TIME_MS 1000
+
 LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
 
 int main(void)
 {
-    int ret = 0;
-    int ret2 = 0;
+	const struct device *led_sensor = DEVICE_DT_GET_ANY(sarche_driver);
 
-    const struct device* driver = DEVICE_DT_GET(DT_NODELABEL(sarche_driver0));
-    struct sensor_value val;
-    while (1)
-    {
-        ret = sensor_channel_get(driver, SENSOR_CHAN_AMBIENT_TEMP, &val);
-        k_msleep(1000);
-        ret2 = sensor_sample_fetch(driver);
-        k_msleep(1000);
-    }
-    return 0;
+	if (!device_is_ready(led_sensor)) {
+		LOG_ERR("LED sensor device not ready");
+		return 0;
+	}
+
+	LOG_INF("LED sensor device ready");
+
+	while (1) {
+		
+		LOG_INF("Turning LED ON...");
+		sensor_sample_fetch(led_sensor);
+		k_msleep(SLEEP_TIME_MS);
+
+		
+		struct sensor_value val = {0, 0};
+		LOG_INF("Turning LED OFF...");
+		sensor_channel_get(led_sensor, SENSOR_CHAN_LIGHT, &val);
+		k_msleep(SLEEP_TIME_MS);
+	}
+
+	return 0;
 }

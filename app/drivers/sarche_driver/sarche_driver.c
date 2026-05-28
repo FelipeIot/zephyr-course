@@ -9,50 +9,98 @@ LOG_MODULE_REGISTER(sarche_driver, LOG_LEVEL_INF);
 
 #define LED_NODE DT_ALIAS(app_led)
 
-static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED_NODE, gpios);
-
-
-static int sarche_driver_init(const struct device *dev);
-static int sarche_driver_channel_get(const struct device *dev, enum sensor_channel channel, struct sensor_value* val);
-static int sarche_driver_sample_fetch(const struct device *dev, enum sensor_channel channel);
-
-static DEVICE_API(sensor, api_sarche_driver) = {
-    .sample_fetch = sarche_driver_sample_fetch,
-    .channel_get = sarche_driver_channel_get,
+struct sarche_sensor_data {
+	const struct device *gpio_dev;
+	gpio_pin_t pin;
 };
 
-#define DEV_INST(inst) DEVICE_DT_INST_DEFINE(inst, sarche_driver_init, NULL, NULL, NULL, POST_KERNEL, 80, &api_sarche_driver);
-DT_INST_FOREACH_STATUS_OKAY(DEV_INST);
+struct sarche_sensor_config {
+	struct gpio_dt_spec led_gpio;
+};
+
 
 static int sarche_driver_sample_fetch(const struct device *dev, enum sensor_channel channel)
 {
-    LOG_INF("Hello from our driver sample fetch %d", channel);
-    gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
-    LOG_INF("LED state: ON");
-    return 0;
+    LOG_INF("Hello from sarche driver sample fetch %d", channel);
+
+    struct sarche_sensor_data *data = dev->data;
+    const struct sarche_sensor_config *config = dev->config;
+    int ret;
+    ret = gpio_pin_set_dt(&config->led_gpio, 1);
+	if (ret) {
+		LOG_ERR("Failed to turn LED on: %d", ret);
+		return ret;
+	}
+    LOG_INF("LED state ON");
+    return 0;   
+
 }
 
 static int sarche_driver_channel_get(const struct device *dev, enum sensor_channel channel, struct sensor_value* val)
 {
-    LOG_INF("Hello from our driver channel get %d", channel);
-    gpio_pin_configure_dt(&led, GPIO_OUTPUT_INACTIVE);
-    LOG_INF("LED state: OFF");
-    return 0;
+    LOG_INF("Hello from sarche driver channel %d", channel);
+    const struct sarche_sensor_config *config = dev->config;
+    int ret;
+    ret = gpio_pin_set_dt(&config->led_gpio, 0);
+	if (ret) {
+		LOG_ERR("Failed to turn LED off: %d", ret);
+		return ret;
+	}
+    LOG_INF("LED state OFF");
+    val->val1 = 42; // Example value
+    val->val2 = 0; // Example value
+    return 0;   
+
 }
 
 static int sarche_driver_init(const struct device *dev)
 {
-    LOG_INF("Hello from our driver init");
-    if (!gpio_is_ready_dt(&led))
-    {
-        LOG_ERR("LED not ready");
-        return -ENODEV;
-    }
+	struct sarche_sensor_data *data = dev->data;
+	const struct sarche_sensor_config *config = dev->config;
+	int ret;
 
-    if (gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE) < 0)
-    {
-        LOG_ERR("Failed to configure LED");
-        return -ENODEV;
-    }
-    return 0;
+	// Get the GPIO device 
+	if (!device_is_ready(config->led_gpio.port)) {
+		LOG_ERR("GPIO device not ready");
+		return -ENODEV;
+	}
+
+	// Configure the GPIO pin
+	ret = gpio_pin_configure_dt(&config->led_gpio, GPIO_OUTPUT_INACTIVE);
+	if (ret) {
+		LOG_ERR("Failed to configure GPIO pin: %d", ret);
+		return ret;
+	}
+
+	data->gpio_dev = config->led_gpio.port;
+	data->pin = config->led_gpio.pin;
+
+	LOG_INF("Device initialized");
+	return 0;
 }
+
+
+// Sensor API structure
+
+static const struct sensor_driver_api sarche_sensor_driver_api = {
+	.sample_fetch = sarche_driver_sample_fetch,
+	.channel_get = sarche_driver_channel_get,
+};
+
+
+
+#define SARCHE_SENSOR_INIT(inst)                                \
+    static struct sarche_sensor_data sarche_sensor_data_##inst; \
+    static const struct sarche_sensor_config sarche_sensor_config_##inst = { \
+        .led_gpio = GPIO_DT_SPEC_GET(DT_DRV_INST(inst), led_gpios), \
+    }; \
+    DEVICE_DT_INST_DEFINE(inst,                                  \
+                          sarche_driver_init,                   \
+                          NULL,                                 \
+                          &sarche_sensor_data_##inst,           \
+                          &sarche_sensor_config_##inst,         \
+                          POST_KERNEL,                          \
+                          CONFIG_KERNEL_INIT_PRIORITY_DEVICE,   \
+                          &sarche_sensor_driver_api);
+
+DT_INST_FOREACH_STATUS_OKAY(SARCHE_SENSOR_INIT)

@@ -13,5 +13,6 @@
         sarche_driver0: sarche_driver {
         compatible = "sarche,driver";
         status = "okay";
+        led-gpios = <&gpiob 0 GPIO_ACTIVE_HIGH>;
     };
 };
