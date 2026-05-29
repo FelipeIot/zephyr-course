@@ -1,6 +1,7 @@
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/drivers/gpio.h>
+#include "sarche_driver.h"
 
 #define DT_DRV_COMPAT sarche_driver
 
@@ -12,6 +13,7 @@ LOG_MODULE_REGISTER(sarche_driver, LOG_LEVEL_INF);
 struct sarche_sensor_data {
 	const struct device *gpio_dev;
 	gpio_pin_t pin;
+	int user_param;
 };
 
 struct sarche_sensor_config {
@@ -79,12 +81,20 @@ static int sarche_driver_init(const struct device *dev)
 	return 0;
 }
 
+static int sarche_driver_set_user_param(const struct device *dev, int value)
+{
+	struct sarche_sensor_data *data = dev->data;
+	data->user_param = value;
+	LOG_INF("user_param set to %d", data->user_param);
+	return 0;
+}
 
-// Sensor API structure
-
-static const struct sensor_driver_api sarche_sensor_driver_api = {
-	.sample_fetch = sarche_driver_sample_fetch,
-	.channel_get = sarche_driver_channel_get,
+static const struct sarche_driver_api sarche_sensor_driver_api = {
+	.sensor = {
+		.sample_fetch = sarche_driver_sample_fetch,
+		.channel_get = sarche_driver_channel_get,
+	},
+	.set_user_param = sarche_driver_set_user_param,
 };
 
 

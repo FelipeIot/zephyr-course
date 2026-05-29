@@ -2,6 +2,7 @@
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/drivers/sensor.h>
+#include <sarche_driver.h>
 
 
 #define SLEEP_TIME_MS 1000
@@ -19,8 +20,11 @@ int main(void)
 
 	LOG_INF("LED sensor device ready");
 
+	int counter = 0;
+
 	while (1) {
-		
+		sarche_set_user_param(led_sensor, counter++);
+
 		LOG_INF("Turning LED ON...");
 		sensor_sample_fetch(led_sensor);
 		k_msleep(SLEEP_TIME_MS);
